@@ -1,0 +1,28 @@
+@startuml
+class Assistant {
+    handle_employee(): void
+    log(): void
+}
+
+class Calculator {
+    +retirement_age: int = 65
+    +age: int
+
+    +constructor(): void
+    +calculate(): void
+}
+
+class Logger {
+    +log(): void
+}
+
+package Figgle {
+    class FiggleFonts {
+        +render(): string
+    }
+}
+
+Assistant *-- Calculator : A owns F (composition)
+Assistant *-- Logger : A owns L (composition)
+Logger ..> FiggleFonts : uses
+@enduml

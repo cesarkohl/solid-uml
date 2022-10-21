@@ -1,0 +1,10 @@
+@startuml
+class Assistant {
+    +retirement_age: int = 65
+    +age: int
+
+    +handle_employee(): void
+    +calculate(): void
+    +log(): void
+}
+@enduml
